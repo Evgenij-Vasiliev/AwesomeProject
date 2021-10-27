@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
 function Greetings() {
-    return <Text style={styles.content}>Hello, React Native!</Text>     
+    return <Text style={styles.content}>Hello, React Native!!!</Text>     
 }
 
 export default Greetings;

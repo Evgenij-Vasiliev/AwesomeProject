@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '15px solid red',
+    // border: '15px solid red',
   },  
 });
