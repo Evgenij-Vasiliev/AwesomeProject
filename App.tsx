@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet , View } from 'react-native';
-import Greetings from './components/Greetings';
-import Clock from './components/Clock';
+import HomePage from './components/HomePage';
 
 export default function App(): JSX.Element {
   return (
-    <View style={styles.container}>
-      <Greetings />
-      <Clock />      
+    <View style={styles.container}>      
+      <HomePage />      
       <StatusBar style="auto" />
     </View>
   );

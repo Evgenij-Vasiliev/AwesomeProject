@@ -1,41 +1,35 @@
-import React, { useState } from "react";
-import Timer from './Timer';
-import ClockTime from './ClockTime';
-import { View } from "react-native";
+import React, { useEffect, useState } from 'react';
+import { DateTime } from 'luxon';
+import { Text, View, StyleSheet } from "react-native";
 
+
+
+function newDate() {
+	return DateTime.now().toLocaleString(DateTime.TIME_24_WITH_SECONDS);
+}
 
 function Clock() {
-  let clock;
-  const [changeOfClock, setChangeOfClock] = useState(true);
-  
-  if (changeOfClock) {
-    clock = (
-      <>
-        <View>
-          <Timer />
-        </View>
-      </>
-    );
-  } else {
-    clock = (
-      <>
-        <View>
-          <ClockTime />
-        </View>
-      </>
-    );
-  }
-
-  return (
-    <View>
-      {clock}
-      <button        
-        onClick={() => setChangeOfClock(!changeOfClock)}
-      >
-        Clock
-      </button> 
-      
-    </View>
-  );
+	const [ newDateString, setNewDateString ] = useState(newDate());
+	useEffect(
+		() => {
+			setTimeout(() => {
+				setNewDateString(newDate());
+			}, 1000);
+		},
+		[ newDateString ]
+	);
+	return (
+		<View>
+			<Text style={styles.clock}>{newDateString}</Text>
+		</View>
+	);
 }
+
+const styles = StyleSheet.create({    
+    clock: {
+        fontSize: 100,
+        fontWeight: 'bold',
+        color: 'red'    
+    }
+});
 export default Clock;
