@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Timer from './Timer';
 import Clock from './Clock';
-import { Text, View, StyleSheet } from "react-native";
+import { Button, View, StyleSheet } from "react-native";
 import Greetings from "./Greetings";
 
 
 function HomePage() {
   let clock;
-  const [changeOfClock, setChangeOfClock] = useState(true);
+  const [changeOfClock, setChangeOfClock] = useState(false);
   
   if (changeOfClock) {
     clock = (
@@ -29,11 +29,10 @@ function HomePage() {
 
   return (
     <View>
-      <button        
-        onClick={() => setChangeOfClock(!changeOfClock)}
-      >
-        Clock
-      </button>  
+      <Button        
+        onPress={() => setChangeOfClock(!changeOfClock)}
+        title='Clock'
+      />        
       <Greetings />
       <View style={styles.homePage}>
       {clock}

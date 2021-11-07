@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Button ,Text, View, StyleSheet } from "react-native";
 
 function Timer() {   
     const [seconds, setSeconds] = useState(0);
@@ -49,9 +49,9 @@ function Timer() {
     return (
         <View>
         <Text style={styles.timer}>{hours}:{minutesTime}:{secondsTime}</Text>
-        <button onClick={timerStart}>Start</button>
-        <button onClick={timerStop}>Stop</button>
-        <button onClick={timerReset}>Reset</button>
+        <Button onPress={timerStart} title='Start' />
+        <Button onPress={timerStop} title='Stop' />
+        <Button onPress={timerReset} title='Reset' />
         </View>
     );
 }
