@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { ReactElement } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import HomePage from './components/HomePage';
 
 export default function App(): ReactElement {
   return (
-    <View style={styles.container}>
-      <HomePage />
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
-    </View>
+      <HomePage />
+    </SafeAreaView>
   );
 }
 
