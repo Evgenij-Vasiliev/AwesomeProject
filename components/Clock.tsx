@@ -22,7 +22,7 @@ function Clock() {
 
 const styles = StyleSheet.create({
   clock: {
-    fontSize: 36,
+    fontSize: 30,
     fontWeight: 'bold',
     color: 'red',
   },

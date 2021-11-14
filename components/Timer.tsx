@@ -47,7 +47,7 @@ function Timer() {
   const secondsStr: string = `${restSeconds}`.padStart(2, '0');
 
   return (
-    <View>
+    <View style={{ flexDirection: 'row' }}>
       <Text style={styles.timer}>
         {hoursStr}:{minutesStr}:{secondsStr}
       </Text>
@@ -60,7 +60,7 @@ function Timer() {
 
 const styles = StyleSheet.create({
   timer: {
-    fontSize: 36,
+    fontSize: 30,
     fontWeight: 'bold',
     color: 'red',
   },

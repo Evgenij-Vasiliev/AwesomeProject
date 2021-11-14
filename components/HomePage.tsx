@@ -11,7 +11,10 @@ function HomePage(): ReactElement {
 
   return (
     <View>
-      <Button onPress={() => setChangeOfClock(!changeOfClock)} title="Clock" />
+      <Button
+        onPress={() => setChangeOfClock(!changeOfClock)}
+        title="Clock/Timer"
+      />
       <Greetings />
       <View style={styles.homePage}>{clock}</View>
       <Messenger />
